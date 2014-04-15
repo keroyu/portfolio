@@ -4,6 +4,7 @@ $blue1: #02B6D2;
 $blue2: #0595AB;
 
 body{
+	font-family: 'Arimo', sans-serif;
 }
 .wrapper{
 	overflow: hidden;
@@ -27,21 +28,22 @@ body{
 }
 .side-nav{
 	float: left; display: inline-block; position: fixed;
-	width: 280px; text-align: right; border-right: 5px solid #eee;
+	width: 240px; text-align: right; border-right: 5px solid #eee;
 	background: rgba(165,165,165, 0.5);
 	box-shadow: 2px 3px 3px #C3C3C3;
 	ul{
 		position: relative; top: 80px; right: 30px;
 		li{
-			cursor: pointer; font-family: 'Federo', cursive; font-size: 24px;
-			line-height: 60px; color: #eee;
+			cursor: pointer;  font-size: 32px;
+			font-family: 'Oleo Script', cursive;
+			line-height: 80px; color: #eee;
 			transition: .3s; -webkit-transition: .3s; -o-transition: .3s; -moz-transition: .3s;
 			&.active, &:hover{ color: #fff;  text-shadow: 1px 1px 1px #000; }
 		}
 	}
 }
 .main{
-	padding: 50px 100px 0 360px;
+	padding: 50px 100px 0 320px;
 	float: left; text-align: left; color: #3F3A31;
 
 	p{
@@ -53,17 +55,20 @@ body{
 		font-size: 30px; padding: 0 0 15px 0; color: #F26835;
 	}
 	h2{
-		font-size: 36px; padding: 10px 0 10px 20px; margin: 50px 0 30px 0;
+		font-size: 45px; padding: 10px 0 10px 20px; margin: 50px 0 30px 0;
 		border-bottom: 3px solid $blue1; border-left: 15px solid $blue1;
 		text-shadow: 2px 1px 1px #fff;
+		font-family: 'Federo', cursive;
 	}
 	h3{
 		display: inline-block;  background: $blue1; color: #fff;
 		padding: 5px 15px; margin: 0 0 10px 0;
-		font-size: 35px;
+		font-size: 35px; font-family: 'Federo', cursive; 
+		border: 3px solid #fff; box-shadow: 1px 1px 1px #555;
 	}
 	h4{
 		font-weight: bold; font-size: 22px; padding: 15px 0 10px 0;
+
 	}
 }
 section{
@@ -72,6 +77,7 @@ section{
 		padding: 30px 60px 40px 40px; margin: 0 0 15px 0;
 		background: rgba(0,0,0,.2);
 		box-shadow: 2px 3px 3px #C3C3C3;
+
 	}
 }
 
@@ -80,7 +86,7 @@ section{
 	background: #EDEDED; padding: 10px 0 10px 40px;
 }
 ul.nmbt{
-
+	box-shadow: 1px 1px 1px #555;
 	li{
 		line-height: 26px; list-style-type: disc; margin-right:20px;
 		color: $blue2; padding: 5px 0; font-size: 18px;
@@ -110,5 +116,21 @@ ul.nmbt{
 	}
 	i{
 		font-size: 100px;
+	}
+}
+
+ul.item-list{
+	li{
+		.float-info{
+			display: block; font-size: 30px; 
+			background: rgba(0,0,0,.5);
+			position: absolute; top: 0px; left: 0px; width: 710px;
+			padding: 10px 20px;
+			a.right{ 
+				color: #fff; cursor: pointer; 
+				&:hover{ color: $blue1; }
+			}
+			i{ margin-right: 10px;}
+		}
 	}
 }
