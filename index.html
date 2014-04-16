@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Kero Yu's Portfolio Website</title>
+<title>Kero Yu's Portfolio</title>
+<meta content="Kero Yu's Portfolio Website" name="description">
+<meta content="web frontend developer, designer, coder" name="keywords">
+<meta content="Kero Yu's Portfolio" property="og:title">
+<meta content="A portfolio website presenting Kero's works." property="og:description">
+<meta content="http://keroyu.logdown.com" property="og:url">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!-- jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
@@ -11,6 +17,7 @@
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/basic.css">
 <link rel="stylesheet" href="css/kerosEasySlider.css">
+<link rel="stylesheet" href="css/animate.css">
 <script src="js/main.js"></script>
 <script src="js/jq.kerosEasySlider.js"></script>
 
@@ -20,26 +27,29 @@
 	<div class="side-nav">
 		<nav>
 			<ul>
-				<li class="active">Top</li>
-				<li>Profile</li>
-				<li>Works</li>
-				<li>Contact</li>
+				<li class="active" id="btn1" data-toid="top">Top</li>
+				<li id="btn2">Profile</li>
+				<li id="btn3">Works</li>
+				<li id="btn4">Contact</li>
 			</ul>
 		</nav>
-
 	</div>
 	<div class="main">
-		<article>
-			<section class="top">
-				<div class="left img"><img src="images/head.jpg" alt=""></div>
+		<section class="top" id="tp-area">
+			<h1>Hi, I'm Kero. I make great websites.</h1>
+			<div class="top-btm">
+				<div class="left img"><img src="images/head.jpg" alt="" id="myhead"></div>
 				<div class="left txt">
-					<h1>Hi, I'm Kero. I make great websites.</h1>
-					<p class="title">I was born in Taiwan, but completed most of my education abroad, which makes me quite "international". I enjoy reading, drawing, playing console games, and of course -- coding.</p>
-					<p class="title">With my favorite tools inluding CodeKit, Prepros, Sublime Text and Github, I insist on coding CLEAN, FLEXIBLE, USER-FRIENDLY, SEO-OPTIMIZED, STANDARDS-COMPLIANT HTML/CSS/JS that loads fast and works across different platforms.</p>
-					<p class="title">Currently I work as a front-end developer for a Taiwanese technology company whose main business focuses on marketing PC/App games.</p>
+
+					<p>I was born in Taiwan, but completed most of my education abroad, which makes me quite "international". I enjoy reading, drawing, playing console games, and of course -- designing & coding.</p>
+					<p>With my favorite tools inluding CodeKit, Prepros, Sublime Text and Github, I insist on coding clean, flexible, user-friendly, SEO-optimized, standards-compliant HTML/CSS/JS that loads fast and works across different platforms.</p>
+					<p>Currently I work as a front-end developer for a Taiwanese technology company whose main business focuses on marketing PC/App games.</p>
 				</div>
-			</section>
-			<h2>Profile</h2>
+			</div>
+
+		</section>
+		<div id="pf-area">
+			<h2 id="profile">Profile</h2>
 			<section class="pf-box">
 				<h3>Education</h3>
 				<ul class="nmbt">
@@ -102,27 +112,27 @@
 
 				</div>
 			</section>
-			<h2>Past Works</h2>
-			<div class="pwbx clearfix">
+		</div>
+		<div id="wk-area">
+			<h2 id="works">Past Works</h2>
+			<div class="clearfix">
 				<div class="slider">
 				    <div class="kerosEasySlider">
-				        <div class="viewport">
-				            <div class="track"><ul class="item-list"><li class="active"><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""><span class="float-info"><a class="right"><i class="fa fa-external-link-square"></i>View Demo</a></span></li><li><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""></li><li><img src="//placehold.it/750x680" alt=""></li></ul></div>
-				        </div>
-				        <ul class="marker"><li class="active"><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li><li><img src="//placehold.it/120x120" alt=""></li></ul>
+			    		<div class="viewport">
+			    		    <div class="track"><ul class="item-list"><li class="active"><img src="images/w1.jpg" alt=""><p class="float-info"><a href="//www.associatespurchasing.com" target="_blank" class="right"><i class="fa fa-external-link-square"></i>View Site</a></p></li><li><img src="images/w2.jpg" ><p class="float-info"><a href="//www.associatespurchasing.com" target="_blank" class="right"><i class="fa fa-external-link-square"></i>View Site</a></p></li><li><img src="images/w3.jpg" ></li><li><img src="images/w4.jpg" ><p class="float-info"><a href="//mjg.omg.com.tw/" target="_blank" class="right"><i class="fa fa-external-link-square"></i>View Site</a></p></li><li><img src="images/w5.jpg" alt="comic star" ><p class="float-info"><a href="//www.comicstar.com.tw" target="_blank" class="right"><i class="fa fa-external-link-square"></i>View Site</a></p></li><li><img src="images/w6.jpg" alt="plvan" ><p class="float-info"><a href="//plvan.com" target="_blank" class="right"><i class="fa fa-external-link-square"></i>View Site</a></p></li><li><img src="images/w7.jpg" alt="bella online" ><p class="float-info"><a href="//bella.omg.com.tw/" target="_blank" class="right"><i class="fa fa-external-link-square"></i>View Site</a></p></li><li><img src="images/w8.jpg" alt="friendo"><p class="float-info"><a href="//www.friendo.com.tw" target="_blank" class="right"><i class="fa fa-external-link-square"></i>View Site</a></p></li><li><img src="images/w9.jpg" alt="puzzle"><p class="float-info"><a href="//puzzle.app-master.com.tw" target="_blank" class="right"><i class="fa fa-external-link-square"></i>View Site</a></p></li><li><img src="images/w10.jpg"></li><li><img src="images/w11.jpg"></li><li><img src="images/w12.jpg"></li><li><img src="images/w13.jpg"></li><li><img src="images/w14.jpg"></li></ul></div>
+			    		</div>
+
+				        <ul class="marker"><li class="active"><img src="images/w1_s.jpg" alt=""></li><li><img src="images/w2_s.jpg"></li><li><img src="images/w3_s.jpg"></li><li><img src="images/w4_s.jpg" ></li><li><img src="images/w5_s.jpg"></li><li><img src="images/w6_s.jpg"></li><li><img src="images/w7_s.jpg"></li><li><img src="images/w8_s.jpg"></li><li><img src="images/w9_s.jpg"></li><li><img src="images/w10_s.jpg"></li><li><img src="images/w11_s.jpg"></li><li><img src="images/w12_s.jpg"></li><li><img src="images/w13_s.jpg"></li><li><img src="images/w14_s.jpg"></li></ul>
 				    </div>
 				</div>
 			</div>
-			<h2>Contact Me</h2>
+		</div>
+		<div id="ct-area">
+			<h2 id="contact">Contact Me</h2>
 			<div class="contact">
 				<a href="mailto:cyudev@gmail.com"><i class="fa fa-envelope"></i></a><a href="http://www.linkedin.com/pub/kero-yu/3a/673/ba1" target="_blank"><i class="fa fa-linkedin"></i></i></a><a href="https://twitter.com/keroyutw" target="_blank"><i class="fa fa-twitter"></i></a>
 			</div>
-		</article>
+		</div>
 	</div>
 </div>
-<script>
-$(function(){
-    $('.slider').kerosEasySlider({ direction : 'h', speed: 800, loop: true });
-});
-</script>
 </body>

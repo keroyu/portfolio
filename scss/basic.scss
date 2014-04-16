@@ -5,26 +5,29 @@ $blue2: #0595AB;
 
 body{
 	font-family: 'Arimo', sans-serif;
+	background: url(../images/grid.png) repeat;
 }
 .wrapper{
 	overflow: hidden;
-	background: url(../images/grid.png) repeat;
 }
 .right{  float: right;}
 .left{ float: left;}
 
 .top{
 	/*width: 1280px;*/
-	overflow: hidden;
+	overflow: hidden; text-align: center;
 	.left{
 		&.img{
 			width: 240px;
 			img{ border: 5px solid #fff; box-shadow: 3px 2px 2px #ccc;}
 		}
 		&.txt{
-			width: 800px;
+			width:60%;  text-align: left; padding-left: 20px;
+			font-family: 'Federo', cursive;
+			p{ font-size: 20px; line-height: 27px; }
 		}
 	}
+	.top-btm{ margin: 0 auto;  display: inline-block; width: 80%; }
 }
 .side-nav{
 	float: left; display: inline-block; position: fixed;
@@ -43,7 +46,7 @@ body{
 	}
 }
 .main{
-	padding: 50px 100px 0 320px;
+	padding: 180px 100px 0 320px; min-height: 1500px;
 	float: left; text-align: left; color: #3F3A31;
 
 	p{
@@ -52,10 +55,11 @@ body{
 	}
 
 	h1{
-		font-size: 30px; padding: 0 0 15px 0; color: #F26835;
+		font-size: 50px; padding: 0px 0 80px 0; color: #F26835;
+		text-align: center; font-family: 'Oleo Script', cursive;
 	}
 	h2{
-		font-size: 45px; padding: 10px 0 10px 20px; margin: 50px 0 30px 0;
+		font-size: 45px; padding: 10px 0 10px 20px; margin: 100px 0 30px 0;
 		border-bottom: 3px solid $blue1; border-left: 15px solid $blue1;
 		text-shadow: 2px 1px 1px #fff;
 		font-family: 'Federo', cursive;
@@ -63,18 +67,17 @@ body{
 	h3{
 		display: inline-block;  background: $blue1; color: #fff;
 		padding: 5px 15px; margin: 0 0 10px 0;
-		font-size: 35px; font-family: 'Federo', cursive; 
+		font-size: 35px; font-family: 'Federo', cursive;
 		border: 3px solid #fff; box-shadow: 1px 1px 1px #555;
 	}
 	h4{
 		font-weight: bold; font-size: 22px; padding: 15px 0 10px 0;
-
 	}
 }
 section{
 	&.top{ margin: 0 0 25px 0; }
 	&.pf-box{
-		padding: 30px 60px 40px 40px; margin: 0 0 15px 0;
+		padding: 30px 60px 40px 40px; margin: 0 0 40px 0;
 		background: rgba(0,0,0,.2);
 		box-shadow: 2px 3px 3px #C3C3C3;
 
@@ -109,7 +112,7 @@ ul.nmbt{
 	}
 }
 .contact{
-	text-align: center; padding: 20px 0 100px 0;
+	text-align: right; padding: 20px 0 100px 0;
 	a{
 		margin-right: 30px; color: #888;
 		&:hover{ color: $blue1;  }
@@ -119,18 +122,24 @@ ul.nmbt{
 	}
 }
 
+
 ul.item-list{
+
 	li{
+
 		.float-info{
-			display: block; font-size: 30px; 
+			display: block; font-size: 25px;
 			background: rgba(0,0,0,.5);
-			position: absolute; top: 0px; left: 0px; width: 710px;
-			padding: 10px 20px;
-			a.right{ 
-				color: #fff; cursor: pointer; 
+			position: absolute; top: 0px; width: 750px;
+			height: 0px;
+			a{
+				display: inline-block;margin: 10px 20px;
+				color: #fff; cursor: pointer; height: 30px;
+				position: relative; top: -35px;
 				&:hover{ color: $blue1; }
+				i{ margin-right: 10px;}
 			}
-			i{ margin-right: 10px;}
+
 		}
 	}
 }

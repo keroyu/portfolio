@@ -17,19 +17,10 @@
                 $ul = obj.find('ul.item-list'),
                 $activeLi = obj.find('ul.item-list li[class=active]');
 
-            // IF CHILDREN IS "A", THE WID/HGT MAY BE VOID, THEN
-            if( obj.find('.item-list li').has('a').length ){
-                wid = obj.find('.item-list li > a > *').width();
-                hgt = obj.find('.item-list li > a > *').height();
-                obj.find('.item-list li > a').css({
-                    'display' : 'inline-block', 'width' : wid + 'px', 'height': hgt + 'px'
-                });
-            }
-
             obj.css( 'height', hgt + 'px' );
 
             obj.find('.viewport').css({
-                'overflow' : 'hidden', 'width' : wid + 'px', 'height': hgt + 'px'
+                'overflow' : 'hidden', 'width' : wid +'px', 'height': hgt + 'px'
             });
 
             obj.find('.track').css({
@@ -49,7 +40,6 @@
                 var itemUnit = wid,
                     trackLength = (itemNum*2-1) * itemUnit,
                     offSetting  = (itemNum-1) * itemUnit;
-
                 obj.find('.track').css({
                     height : hgt + 'px', width : trackLength + 'px', left  : '-' + offSetting + 'px'
                 });
@@ -64,8 +54,9 @@
                 })
 
                 // BASIC SLIDER ANIMATION
-                var basicMove = function(thisIndex, targetIndex){
+                var basicMove = function(thisIndex, targetIndex, itemUnit){
                     var offset = (targetIndex - thisIndex) * itemUnit;
+
                     if( offset > 0 ){
                         $ul.stop(true,true).animate( { left : "-=" + offset }, o.speed, "easeOutExpo" );
                     }else{
@@ -92,8 +83,9 @@
                 $ul.css( 'top', offSetting + 'px' )
 
                 // BASIC SLIDER ANIMATION
-                var basicMove = function(thisIndex, targetIndex){
+                var basicMove = function(thisIndex, targetIndex, itemUnit){
                     var offset = (targetIndex - thisIndex) * itemUnit;
+
                     if( offset > 0 ){
                         $ul.stop(true,true).animate( { top : "-=" + offset }, o.speed, "easeOutExpo" );
                     }else{
@@ -108,13 +100,14 @@
             /* DIRECTION BRANCH ENDS  */
 
             // MARKER TRIGGER
-            obj.find('ul.marker li').hover(function(){
+            obj.find('ul.marker li').click(function(){
 
                 if( $(this).hasClass('active') == false ){
 
                     var thisIndex = obj.find('ul.marker li[class=active]').index(),
-                        targetIndex = $(this).index();
-                    basicMove(thisIndex, targetIndex);
+                        targetIndex = $(this).index(),
+                        itemUnit = 750;
+                    basicMove(thisIndex, targetIndex, itemUnit);
                 }
             });
 
@@ -134,7 +127,7 @@
                         var targetIndex = thisIndex - 1;
                     }
                 }
-                basicMove(thisIndex, targetIndex);
+                basicMove(thisIndex, targetIndex,itemUnit);
             };
 
             // CONTROLLER
