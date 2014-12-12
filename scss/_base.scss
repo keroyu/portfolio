@@ -1,7 +1,4 @@
-@charset "utf-8";
 
-$blue1: #02B6D2;
-$blue2: #0595AB;
 
 body{
 	font-family: 'Arimo', sans-serif;
@@ -60,12 +57,12 @@ body{
 	}
 	h2{
 		font-size: 45px; padding: 10px 0 10px 20px; margin: 100px 0 30px 0;
-		border-bottom: 3px solid $blue1; border-left: 15px solid $blue1;
+		border-bottom: 3px solid $primary; border-left: 15px solid $primary;
 		text-shadow: 2px 1px 1px #fff;
 		font-family: 'Federo', cursive;
 	}
 	h3{
-		display: inline-block;  background: $blue1; color: #fff;
+		display: inline-block;  background: $primary; color: #fff;
 		padding: 5px 15px; margin: 0 0 10px 0;
 		font-size: 35px; font-family: 'Federo', cursive;
 		border: 3px solid #fff; box-shadow: 1px 1px 1px #555;
@@ -85,14 +82,14 @@ section{
 }
 
 .nmbt, .webx{
-	margin: 10px 0 0 80px; border-left: 15px solid $blue2;
+	margin: 10px 0 0 80px; border-left: 15px solid $secondary;
 	background: #EDEDED; padding: 10px 0 10px 40px;
 }
 ul.nmbt{
 	box-shadow: 1px 1px 1px #555;
 	li{
 		line-height: 26px; list-style-type: disc; margin-right:20px;
-		color: $blue2; padding: 5px 0; font-size: 18px;
+		color: $secondary; padding: 5px 0; font-size: 18px;
 		border-bottom: 2px solid #fff;
 		&:last-child{ border-bottom: none; }
 	}
@@ -102,7 +99,7 @@ ul.nmbt{
 		overflow: hidden;
 		.time, .desc{ float: left; }
 		.time{
-			width: 210px; font-size: 26px; padding: 15px 0 0 0; color: $blue2;
+			width: 210px; font-size: 26px; padding: 15px 0 0 0; color: $secondary;
 		}
 		.desc{
 			width: 500px; border-bottom: 2px solid #ccc;
@@ -115,7 +112,7 @@ ul.nmbt{
 	text-align: right; padding: 20px 0 100px 0;
 	a{
 		margin-right: 30px; color: #888;
-		&:hover{ color: $blue1;  }
+		&:hover{ color: $primary;  }
 	}
 	i{
 		font-size: 100px;
@@ -136,7 +133,7 @@ ul.item-list{
 				display: inline-block;margin: 10px 20px;
 				color: #fff; cursor: pointer; height: 30px;
 				position: relative; top: -35px;
-				&:hover{ color: $blue1; }
+				&:hover{ color: $primary; }
 				i{ margin-right: 10px;}
 			}
 
